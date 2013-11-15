@@ -32,6 +32,7 @@ Guarda los cambios en tu repo de Github:
 git add .
 git commit "El titulo de mi articulo"
 git push
+```
 
 ### Genera un _pull request_
 Una vez que hayas subido tus cambios a tu repo, debes generar un Pull Request para actualizar el repositorio oficial.
