@@ -22,9 +22,17 @@ html {
   body > nav {
     border-top:0px solid #fff;
     border-bottom:0px solid #fff;
-    padding-top:4px;
+    padding-top:6px;
     padding-bottom:3px;
-    background: transparent;
+	// needs latest Compass, add '@import "compass"' to your scss
+	background-color: #299a0b; // Old browsers
+	@include filter-gradient(#71aa00, #299a0b, vertical); // IE6-9
+	@include background-image(linear-gradient(top, #71aa00 0%,#299a0b 100%));
+	
+	.main-navigation {
+		margin-top: 5px;
+	}
+	
 
     ul {
         padding-top:0px;
@@ -58,14 +66,14 @@ html {
   }
 
   .blue_dark {
-      color: #5AA6F1;
-      text-shadow: 2px 2px 2px  #0F3B6A;
-      font-size:20px;
+	color: #eee;
+	text-shadow: 2px 2px 2px rgb(73, 70, 70);
+    font-size:20px;
   }
   .blue_light {
       text-shadow: 2px 2px 2px  #0F3B6A;
-      color: #A6CCFB;
-      font-size:20px;
+      color: #fff;
+      font-size:32px;
   }
 
   .gist-highlight {
