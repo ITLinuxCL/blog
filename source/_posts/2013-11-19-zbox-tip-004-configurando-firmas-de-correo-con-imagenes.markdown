@@ -18,6 +18,7 @@ Cómo se configura esto en Zimbra? Aquí vamos...
 
 {%img https://itlinux.zendesk.com/hc/en-us/article_attachments/200210448/Captura_de_pantalla_2013-11-19_a_la_s__14.05.49.png %}
 
+<!-- more -->
 
 * En el menú de la izquierda seleccione Firmas
 
