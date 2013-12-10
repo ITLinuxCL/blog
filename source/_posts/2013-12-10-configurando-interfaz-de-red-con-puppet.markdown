@@ -32,7 +32,7 @@ node 'node1.example.com' inherits base-node {
         }
 }
 ```
-Como se aprecia en la declaración del nodo <i>base-node</i> definimos la clase network::global configurando el gateway, luego en la declaración del nodo1 heredamos las configuraciones del nodo base-node y finalmente definimos la configuración de red para el nodo1. Una vez aplicada la configuración  en el servidor "node1" con el comando mágico (puppet aget --test) veremos nuestra configuración de la siguiente manera.
+Como se aprecia en la declaración del nodo <i>base-node</i> definimos la clase network::global configurando el gateway, luego en la declaración del nodo1 heredamos las configuraciones del nodo base-node y finalmente definimos la configuración de red para el nodo1. Una vez aplicada la configuración  en el servidor "node1" con el comando mágico (puppet agent --test) veremos nuestra configuración de la siguiente manera.
 
 ```ruby
 [root@node1 ~]# cat /etc/sysconfig/network-scripts/ifcfg-eth1
