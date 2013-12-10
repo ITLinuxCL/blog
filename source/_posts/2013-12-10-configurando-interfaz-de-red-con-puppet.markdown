@@ -6,7 +6,9 @@ comments: true
 categories: puppet, devops
 author: Miguel Coa.
 ---
-Es muy común en Linux que de forma constante tenemos que estar reconfigurando nuestras interfaces de red y ajustando valores como : autoneg, mtu, mascara de red, etc. Configuraciones que si bien son simples de aplicar pueden implicar una inversión en tiempo elevada dependiendo de la cantidad de servidores que tengamos que reconfigurar. Una solución para esto, es tener nuestra infraestructura administrada con [Puppet](http://puppetlabs.com/) esto nos permitirá de forma simple aplicar los cambios en un archivo para los <i>"N"</i> servidores que necesitemos actualizar. 
+Es muy común en Linux que de forma constante tenemos que estar reconfigurando nuestras interfaces de red y ajustando valores como : autoneg, mtu, mascara de red, etc. Configuraciones que si bien son simples de aplicar pueden implicar una inversión en tiempo elevada dependiendo de la cantidad de servidores que tengamos que reconfigurar.
+
+Una solución para esto, es tener nuestra infraestructura administrada con [Puppet](http://puppetlabs.com/) esto nos permitirá de forma simple aplicar los cambios en un archivo para los <i>"N"</i> servidores que necesitemos actualizar. 
 Por ejemplo y para este caso vamos a trabajar con un módulo de configuración de red que nos permite administrar nuestro servidor de forma rápida y eficaz.  
 
 1- Instalamos el módulo
