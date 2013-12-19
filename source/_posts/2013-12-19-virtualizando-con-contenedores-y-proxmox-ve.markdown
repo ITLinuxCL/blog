@@ -4,13 +4,13 @@ title: "Virtualizando con contenedores y Proxmox VE"
 date: 2013-12-19 12:27
 comments: true
 categories: proxmox virtualizacion
-published: false
+published: true
 author: Miguel Coa
 ---
 
 Una de las gracias de tener un ambiente de virtualización bajo Proxmox VE, es que nos permite la creación de máquinas virtuales bajo lo que se denomina <i>contenedores</i>. ¿Qué carajo es esto? ....básicamente es la creación de una máquina virtual en un ambiente 'chroot' directamente en el sistema de arhichos del servidor base, lo que nos da una serie de ventajas:
 
-1. Administación de recursos de forma directa: Ejemplo, podemos incrementar la ram, swap, cpu, disco, etc. Y los cambios son aplicados al instante en el servidor virtual.
+1. Administración de recursos de forma directa: Ejemplo, podemos incrementar la ram, swap, cpu, disco, etc. Y los cambios son aplicados al instante en el servidor virtual.
 2. El uso del mismo sistema de ficheros para todas las máquinas virtuales no 'sobrecarga' al sistema base.
 3. La creación y borrado de máquinas virtuales es casi instantaneo.
 4. La velocidad de las aplicaciones que tenemos corriendo en el contenedor es casi la misma si se tratara del servidor base.
