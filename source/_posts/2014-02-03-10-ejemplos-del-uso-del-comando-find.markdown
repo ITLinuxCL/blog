@@ -113,7 +113,7 @@ Miguel@MacBook:$ find /var/ftp -group admin -type d
 . Encontrar todos los archivos modificados en la última hora
 
 ```ruby
-[root@mail-old ~]# find /var/log/ -mmin -60
+[root@mail-old ~]$ find /var/log/ -mmin -60
 /var/log/clamav/clamd.log
 /var/log/secure
 /var/log/wtmp
@@ -125,7 +125,7 @@ Miguel@MacBook:$ find /var/ftp -group admin -type d
 
 . Encontrar todos los archivos de hasta 50 MG de tamaño
 ```ruby
-[root@mail-old ~]# find /var/tmp/ -size 50M
+[root@mail-old ~]$ find /var/tmp/ -size 50M
 /tmp/nohup
 ```
 
