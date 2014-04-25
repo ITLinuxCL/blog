@@ -11,7 +11,7 @@ iEl módule que nos permitirá hacer la magia es bastante simple, lo llamativo e
 
 Bueno, manos a la obra y vamos a crear nuestro módulo:
 
-1. Lo primero que tenemos que realizar es crear el path del módulo y el init.pp que será llamado cuando sea instanciado el módulo dentro de nuestro(s) nodo(s).
+####1. Lo primero que tenemos que realizar es crear el path del módulo y el init.pp que será llamado cuando sea instanciado el módulo dentro de nuestro(s) nodo(s).
 
 ```ruby
 [root@master modules]$ mkdir users
@@ -19,7 +19,7 @@ Bueno, manos a la obra y vamos a crear nuestro módulo:
 [root@master modules]$ touch users/manifests/init.pp
 ```
 
-2. El contenido del init.pp tiene que ser el siguiente 
+####2. El contenido del init.pp tiene que ser el siguiente 
 
 ```ruby
 root@master manifests]$ cat init.pp
