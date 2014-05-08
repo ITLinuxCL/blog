@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Puppet y la creación de módulos con Hiera"
-date: 2014-04-29 18:02
+date: 2014-05-08 10:02
 comments: true
 published: true
 keywords: linux, admin, puppet, hiera, devops
@@ -12,7 +12,7 @@ Primero que todo ¿Qué es Hiera?
 
 De las palabras de la documentación de Puppet:
 {% blockquote %}
-Hiera es una herramienta de búsqueda de pares clave/valor para configurar información, hecha para mejorar Puppet y permitirte establecer los datos específicos del nodo sin repeticiones.
+Hiera es una herramienta para consultar información del tipo clave/valor, desarrollado para mejorar Puppet y permitir guardar sin duplicación datos específicos de los nodos.
 {% endblockquote %}
 
 En palabras un poco más simple, Hiera; es un componente (así como facter) que nos permite generar un grado de abstracción y portabilidad mayor al momento de configurar nuestros módulos. Ya que en archivos en formatos "yaml, json, mysql y otros"  de forma jeráquica podemos almacenar información que luego será llamada por el módulo y "cargada" al manifiesto. 
@@ -277,8 +277,8 @@ Como vimos el uso de Hiera es bastante interesante ya que para el caso del ejemp
 <u>Referencias</u>
 
 
-http://docs.puppetlabs.com/hiera/1/index.html
-http://docs.puppetlabs.com/hiera/1/complete_example.html
-http://www.craigdunn.org/2011/10/puppet-configuration-variables-and-hiera/
+* [http://docs.puppetlabs.com/hiera/1/index.html](http://docs.puppetlabs.com/hiera/1/index.html)
+* [http://docs.puppetlabs.com/hiera/1/complete_example.html](http://docs.puppetlabs.com/hiera/1/complete_example.html)
+* [http://www.craigdunn.org/2011/10/puppet-configuration-variables-and-hiera/](http://www.craigdunn.org/2011/10/puppet-configuration-variables-and-hiera/)
 
 
