@@ -4,7 +4,7 @@ title: "Puppet creando usuarios desde Hiera"
 date: 2014-05-28 12:24
 comments: true
 categories: devops, puppet, hiera
-published: false
+published: true
 author: Miguel Coa M.
 ---
 En una entrada anterior habíamos escrito sobre como [crear usuarios mediante Puppet](http://blog.itlinux.cl/blog/2014/02/04/puppet-administrando-cuentas-de-usuario-linux/). Bueno, ahora lo que veremos es este mismo proceso pero ahora la data será importada desde Hiera y aplicada a los nodos. 
