@@ -7,6 +7,7 @@ categories: [web,ruby,bash]
 keywords: linux,seguridad,bash
 description: Un simple tutorial de como realizar pruebas sobre nuestras aplicaciones con JMeter
 ---
+{% img right /images/load_test.png 325 %}
 Una excelente forma de validar nuestras aplicaciones y sitios web consiste en someterlos a pruebas de carga para comprobar como se comportarán una vez que vean la luz de Internet.
 
 [JMeter](http://jmeter.apache.org) es una de las mejores herramientas Open Source para realizar pruebas de carga. Además de HTTP soporta protocolos como POP3, IMAP, FTP, etc. y también permite programar lo que llama [Planes de Prueba](http://jmeter.apache.org/usermanual/build-test-plan.html) que consisten en guíones de ejecución para las pruebas de stress.
