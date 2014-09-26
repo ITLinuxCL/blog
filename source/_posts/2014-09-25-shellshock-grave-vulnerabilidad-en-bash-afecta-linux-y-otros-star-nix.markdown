@@ -12,6 +12,19 @@ El 24 de Septiembre de 2014 se dio a conocer una importante vulnerabilidad en Ba
 
 Lo que primero comenzó como una vulnerabilidad de ejecución local, se ha extendido y ahora existen formas de ejecutarla de forma remota. Recomendamos a todos que actualicen sus sistemas tan pronto sea posible.
 
+Existe una forma fácil de comprobar si tus sistemas son vulnerables. En una consola escribe lo siguiente:
+
+```bash
+env x='() { :;}; echo vulnerable' bash -c "echo es una prueba"
+```
+
+Si tu sistema es vulnerable, la salida será:
+
+```bash
+vulnerable
+ this is a test
+```
+
 A continuación dejamos un listado de enlaces donde podrás encontrar información específica a cada distribución:
 
 * Ubuntu Linux: [http://www.ubuntu.com/usn/usn-2362-1/](http://www.ubuntu.com/usn/usn-2362-1/)
