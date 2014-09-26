@@ -3,6 +3,7 @@ layout: post
 title: "Buscamos Tecnico de Soporte Linux"
 date: 2014-06-05 16:49
 comments: true
+published: false
 categories: itlinux, trabajo, soporte
 description: Oferta de trabajo en IT Linux
 ---
