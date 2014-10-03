@@ -6,6 +6,7 @@ comments: true
 categories: [web,ruby,bash]
 keywords: linux,seguridad,bash
 description: Un simple tutorial de como realizar pruebas sobre nuestras aplicaciones con JMeter
+author: Patricio Bruna
 ---
 {% img right /images/load_test.png 325 %}
 Una excelente forma de validar nuestras aplicaciones y sitios web consiste en someterlos a pruebas de carga para comprobar como se comportarán una vez que vean la luz de Internet.

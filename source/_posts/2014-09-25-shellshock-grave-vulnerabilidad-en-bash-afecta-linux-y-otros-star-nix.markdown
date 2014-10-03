@@ -6,6 +6,7 @@ comments: true
 categories: [linux,seguridad,bash]
 keywords: linux,seguridad,bash
 description: Bug en Bash crea un gran agujero de seguridad que afecta a todos los *nix
+author: Patricio Bruna
 ---
 {% img right /images/shellshock.jpg 325 %}
 El 24 de Septiembre de 2014 se dio a conocer una importante vulnerabilidad en Bash. Esta vulnerabilidad, llamada "Shellshock" y con los identificadores [CVE-2014-6271](http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2014-6271) y [CVE-2014-7169](http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2014-7169), permite ejecución remota de código.
