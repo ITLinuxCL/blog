@@ -36,7 +36,7 @@ En Ovirt cada disco de tu VM está asociado con un volumen LVM, así que lo prim
 **vda** /rhev/data-center/70ca7a78-b570-11e1-bcfe-2e18820c3a67/e1537ba0-7d0f-4e4a-88b8-7f5698b2ceae/images/7e4c3ed3-73e6-44d8-8d21-efbb7818af86/e0c77de3-7589-43bc-bfdd-db11e11dab93
 ```
 
-Del comando debes notar que ```pbrunalab``` es el nombre de la máquina virtual en cuestión. El resultado que nos entrega el comando es que el disco ```vda``` está asociado a un tipo de dispositivo. Ahora es momento de  obtener el dispositivo: 
+El resultado nos entrega que el disco ```vda``` está asociado a un tipo de dispositivo. Ahora es momento de  obtener el dispositivo: 
 
 ```
 [root@ovirt]$ ls -l /rhev/data-center/70ca7a78-b570-11e1-bcfe-2e18820c3a67/e1537ba0-7d0f-4e4a-88b8-7f5698b2ceae/images/7e4c3ed3-73e6-44d8-8d21-efbb7818af86/e0c77de3-7589-43bc-bfdd-db11e11dab93
