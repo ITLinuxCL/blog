@@ -9,6 +9,7 @@ keywords: zbox
 description: Reporte de la caída del servicio de correo del día 09 de Febrero de 2015
 author: Equipo ZBoxApp
 ---
+{% img right /images/ZBox.png 300 %}
 A continuación se explican los eventos que resultaron en la caída de los servicios de correo el día Martes pasado, y que duró un poco más de 45 minutos. Esta caída afectó al 70% de los usuarios de ZBox Mail.
 
 ZBox Mail es una plataforma distribuida, es decir, existen varios servidores que cumplen funciones específicas, no uno sólo que realiza todo el trabajo. Cada servidor pertenece a uno de estos roles:
@@ -61,7 +62,7 @@ Para lograr estos objetivos realizaremos las siguientes acciones durante la pró
 Habilitaremos un nuevo sitio, externo a nosotros, en el cual podrán revisar transparentemente el estado de la plataforma y métricas de la misma.
 
 ##### 2. Información inmediata durante fallos
-En el mismo sitio anterior se publicará información de forma constante cuando ocurra un problema y también tendrá habilitado una cuenta en Twitter para que puedan seguir en línea el proceso de recuperación y el estado de la plataforma.
+En el mismo sitio anterior se publicará información de forma constante cuando ocurra un problema y también estará disponible en nuestra [cuenta de Twitter](https://twitter.com/zboxapp)  para que puedan seguir en línea el proceso de recuperación y el estado de la plataforma.
 
 ##### 3. Nueva dirección de correo de Soporte
 Sabemos que la dirección de correo actual no es muy amigable, así que habilitaremos una nueva más simple, como ayuda@zboxapp.com
@@ -76,3 +77,5 @@ Todos los puntos anteriores estarán en funcionamiento el próximo Miércoles 18
 Equipo ZBox
 
 [www.zboxapp.com](http://www.zboxapp.com)
+
+[@ZBoxApp](https://twitter.com/zboxapp)
