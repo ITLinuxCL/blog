@@ -11,6 +11,13 @@ rsync_delete   = false
 rsync_args     = ""  # Any extra arguments to pass to rsync
 deploy_default = "rsync"
 
+ssh_user       = "mcoa@blog.itlinux.cl"
+ssh_port       = "22"
+document_root  = "/var/zpanel/hostdata/itlinux/public_html/blog_itlinux_cl"
+rsync_delete   = false
+rsync_args     = ""  # Any extra arguments to pass to rsync
+deploy_default = "rsync"
+
 # This will be configured for you when you run config_deploy
 deploy_branch  = "gh-pages"
 
