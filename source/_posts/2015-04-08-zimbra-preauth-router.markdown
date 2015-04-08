@@ -8,6 +8,7 @@ keywords: zimbra, zbox, ZPR
 description: Zero (0) downtime migration of Zimbra
 author: "Patricio Bruna"
 ---
+{% img right http://i.imgur.com/dJ5jnB0.gif %}
 At [ZBox Mail](https://www.zboxapp.com) we are faced with migrations from production Zimbra servers to Our Cloud Platform. Some times the source servers are small enough that you can bring down the service for a couple of hours, migrate all the mailboxes and start again in the new home.
 
 But _luckily_ for us we are currently migrating a lot of big platforms. For big we are talking over 1,000 mailboxes and Terabytes of mail data. And `One Does Not Simply` migrate this in a couple of hours.
@@ -28,6 +29,8 @@ The way the Zimbra Preauth Router (`ZPR`) works is by replacing the standard Zim
 2. `ZPR` looks into a DB file for an entry for this user, any user listed here was migrated.
 3. If it is a migrated used, ZPR redirects to the new platform, if not, to the current platform.
 4. Thanks to `Zimbra Preauth` the user enter directly to the Webmail, without the need of another validation.
+
+{% img /images/ZPR.png %}
 
 This way the users doesn't have to learn a new URL and the migration process is mostly transparent for them.
 
