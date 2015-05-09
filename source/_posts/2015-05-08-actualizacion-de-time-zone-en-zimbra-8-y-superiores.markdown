@@ -8,7 +8,7 @@ keywords: zimbra, timezone, java
 description: Como actualizar la zona horaria de servidores Zimbra Mailbox
 author: "Patricio Bruna"
 ---
-{% img right images/daylight-savings.jpg %}
+{% img right /images/daylight-savings.jpg %}
 Para quienes vivimos en Chile y trabajamos en computación se ha convertido en un ritual anual tener que actualizar nuestros sistemas porque la fecha de cambio de horario de Verano a Invierno o vice versa no es siempre la misma. Aunque este año se tomo la _brillante_, y si por brillante quiero decir **estúpida**, desición de dejar fijo el horario de Verano.
 
 Pero bueno este post no es sobre mis opiniones, por más acertadas que sean, si no sobre como corregir la base de datos de Zonas Horarias que viene integrada en la máquina virtual de Java que usa Zimbra.
