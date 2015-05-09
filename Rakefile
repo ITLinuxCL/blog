@@ -4,14 +4,7 @@ require "stringex"
 
 ## -- Rsync Deploy config -- ##
 # Be sure your public key is listed in your server's ~/.ssh/authorized_keys file
-ssh_user       = "pbruna@blog.itlinux.cl"
-ssh_port       = "22"
-document_root  = "/var/zpanel/hostdata/itlinux/public_html/blog_itlinux_cl"
-rsync_delete   = false
-rsync_args     = ""  # Any extra arguments to pass to rsync
-deploy_default = "rsync"
-
-ssh_user       = "pbruna@blog.itlinux.cl"
+ssh_user       = "pbruna@104.236.112.187"
 ssh_port       = "22"
 document_root  = "/var/zpanel/hostdata/itlinux/public_html/blog_itlinux_cl"
 rsync_delete   = false
