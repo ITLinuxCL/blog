@@ -26,14 +26,14 @@ Como veremos, existen dos tipos de consultas:
 Empecemos con la primera que es la más rápida. Todas las búsquedas las haremos en Kibana.
 
 ### Buscando con Amavisd
-Supongamos que nos piden un listado de todos los correos de las ultima hora  de `pbruna@itlinux.cl` para `deugenin@itlinux.cl`.
+Supongamos que nos piden un listado de todos los correos de las ultima hora  de `pbruna@example.com` para `deugenin@example.com`.
 
 Para ello ejecutamos los siguientes pasos en Kibana.
 
 #### 1. Buscar Message-ID en registros de Amavis
 En el cuadro de búsqueda de Kibana ingresa lo siguiente:
 ```sql
-tags:"amavis" AND tags:"result" AND from:"pbruna@itlinux.cl" AND to:"deugenin@itlinux.cl"
+tags:"amavis" AND tags:"result" AND from:"pbruna@example.com" AND to:"deugenin@example.com"
 ```
 
 {% img center /images/discover_amavis.png %}
@@ -86,28 +86,28 @@ Esto resultó en 21 registros, 21 líneas de un archivo de log. A continuación 
 2015-05-25T13:24:54.058674-03:00 mta-in-01 postfix/cleanup[31598]: 0CCC62816D5: message-id=<200345754.22435379.1432571094009.JavaMail.zimbra@itlinux.cl>
 
 # 3. Se encola
-2015-05-25T13:24:54.062257-03:00 mta-in-01 postfix/qmgr[1595]: 0CCC62816D5: from=<pbruna@itlinux.cl>, size=2750, nrcpt=1 (queue active)
+2015-05-25T13:24:54.062257-03:00 mta-in-01 postfix/qmgr[1595]: 0CCC62816D5: from=<pbruna@example.com>, size=2750, nrcpt=1 (queue active)
 
 # 4. Lo Entregamos a DKIM
-2015-05-25T13:24:54.306708-03:00 mta-in-01 postfix/smtp[31504]: 0CCC62816D5: to=<deugenin@itlinux.cl>, relay=127.0.0.1[127.0.0.1]:10026, delay=0.26, delays=0.01/0/0.01/0.24, dsn=2.0.0, status=sent (250 2.0.0 from MTA(smtp:[127.0.0.1]:10030): 250 2.0.0 Ok: queued as 31D4F2816E1)
+2015-05-25T13:24:54.306708-03:00 mta-in-01 postfix/smtp[31504]: 0CCC62816D5: to=<deugenin@example.com>, relay=127.0.0.1[127.0.0.1]:10026, delay=0.26, delays=0.01/0/0.01/0.24, dsn=2.0.0, status=sent (250 2.0.0 from MTA(smtp:[127.0.0.1]:10030): 250 2.0.0 Ok: queued as 31D4F2816E1)
 
 # 5. Lo sacamos de la cola
 2015-05-25T13:24:54.323934-03:00 mta-in-01 postfix/qmgr[1595]: 0CCC62816D5: removed
 
 # 6. Nos saltamos algunos pasos para mostrar que ahora DKIM lo pasa a Amavisd
-2015-05-25T13:24:54.342114-03:00 mta-in-01 postfix/smtp[31468]: 31D4F2816E1: to=<deugenin@itlinux.cl>, relay=127.0.0.1[127.0.0.1]:10025, delay=0.14, delays=0.12/0/0.01/0.01, dsn=2.0.0, status=sent (250 2.0.0 Ok: queued as 5261B2816D5)
+2015-05-25T13:24:54.342114-03:00 mta-in-01 postfix/smtp[31468]: 31D4F2816E1: to=<deugenin@example.com>, relay=127.0.0.1[127.0.0.1]:10025, delay=0.14, delays=0.12/0/0.01/0.01, dsn=2.0.0, status=sent (250 2.0.0 Ok: queued as 5261B2816D5)
 
 # 7. Amavis lo recibe y le asigna queue_id
 2015-05-25T13:24:54.186406-03:00 mta-in-01 postfix/amavisd/smtpd[28298]: 2D79C2816DD: client=localhost[127.0.0.1]
 
 # 8. Amavis lo procesa
-2015-05-25T13:24:54.305138-03:00 mta-in-01 amavis[31520]: (31520-03) Passed CLEAN {RelayedInternal,Archived}, ORIGINATING/MYNETS LOCAL [192.168.0.152]:33696 <pbruna@itlinux.cl> -> <deugenin@itlinux.cl>, quarantine: deugenin-20150309@itlinux.cl.archive, pbruna-20150307@itlinux.cl.archive, Queue-ID: 0CCC62816D5, Message-ID: <200345754.22435379.1432571094009.JavaMail.zimbra@itlinux.cl>, mail_id: bStz4_w6-5Pp, Hits: -, size: 2750, queued_as: 31D4F2816E1, 239 ms
+2015-05-25T13:24:54.305138-03:00 mta-in-01 amavis[31520]: (31520-03) Passed CLEAN {RelayedInternal,Archived}, ORIGINATING/MYNETS LOCAL [192.168.0.152]:33696 <pbruna@example.com> -> <deugenin@example.com>, quarantine: deugenin-20150309@itlinux.cl.archive, pbruna-20150307@itlinux.cl.archive, Queue-ID: 0CCC62816D5, Message-ID: <200345754.22435379.1432571094009.JavaMail.zimbra@itlinux.cl>, mail_id: bStz4_w6-5Pp, Hits: -, size: 2750, queued_as: 31D4F2816E1, 239 ms
 
 # 9. Postfix recibe nuevamente el mensaje procesado por Amavisd
-2015-05-25T13:24:54.342158-03:00 mta-in-01 postfix/qmgr[1595]: 5261B2816D5: from=<pbruna@itlinux.cl>, size=3910, nrcpt=1 (queue active)
+2015-05-25T13:24:54.342158-03:00 mta-in-01 postfix/qmgr[1595]: 5261B2816D5: from=<pbruna@example.com>, size=3910, nrcpt=1 (queue active)
 
 # 10. Postfix entrega el mensaje en la casilla
-2015-05-25T13:24:54.453188-03:00 mta-in-01 postfix/lmtp[28300]: 5261B2816D5: to=<deugenin@itlinux.cl>, relay=mailbox-02.zboxapp.com[182.168.0.172]:7025, delay=0.12, delays=0.01/0/0/0.1, dsn=2.1.5, status=sent (250 2.1.5 Delivery OK)
+2015-05-25T13:24:54.453188-03:00 mta-in-01 postfix/lmtp[28300]: 5261B2816D5: to=<deugenin@example.com>, relay=mailbox-02.zboxapp.com[182.168.0.172]:7025, delay=0.12, delays=0.01/0/0/0.1, dsn=2.1.5, status=sent (250 2.1.5 Delivery OK)
 
 # 11. Se elimina el mensaje de la cola
 2015-05-25T13:24:54.453439-03:00 mta-in-01 postfix/qmgr[1595]: 5261B2816D5: removed
@@ -122,7 +122,7 @@ Para mantener el artículo lo más breve posible omitimos algunos pasos.
 Como te habrás dado cuenta, toda la magia se basa en el campo `messageid`, y la gracia de contar con `Amavisd` es que guarda en un sólo registro la información de los campos: `From`, `To` y `messageid`, como se ve resumido en el siguiente ejemplo:
 
 ```
-2015-05-25T13:24:54.... <pbruna@itlinux.cl> -> <deugenin@itlinux.cl>, ....,
+2015-05-25T13:24:54.... <pbruna@example.com> -> <deugenin@example.com>, ....,
 Message-ID: <200345754.22435379.1432571094009.JavaMail.zimbra@itlinux.cl>...
 queued_as: 31D4F2816E1, 239 ms
 ```
@@ -132,7 +132,7 @@ Sin `Amavisd` la cosa se hace un poco más tediosa, ya que debes hacer un mapa d
 #### 1. Busca los posibles qids
 En el cuadro de búsqueda de Kibana ingresa lo siguiente:
 ```sql
-component:"qmgr" AND from:"pbruna@itlinux.cl"
+component:"qmgr" AND from:"pbruna@example.com"
 ```
 
 Anota todos los `qids` que resultaron.
