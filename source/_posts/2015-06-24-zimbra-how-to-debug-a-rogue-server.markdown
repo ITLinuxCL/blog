@@ -115,7 +115,7 @@ itemcache_checkpoint: 0
 [zimbra@mailbox-03 ~]$
 ```
 
-Como puedes ver en el resultado, `comment` indica cual es el usuario. Una vez ideniticados, los bloqueamos y el servidor volvió a su comportamiento normal, lo que nos permitió examinar con más calma cual es la causa del problema.
+Como puedes ver en el resultado, `comment` indica cual es el usuario. Una vez identificados, los bloqueamos y el servidor volvió a su comportamiento normal, lo que nos permitió examinar con más calma cual es la causa del problema.
 
 {%img center /images/mbx-new-select-chart.png %}
 
