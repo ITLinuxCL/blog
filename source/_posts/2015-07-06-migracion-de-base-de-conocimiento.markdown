@@ -1,10 +1,11 @@
 ---
 layout: post
 title: "Migración de base de conocimiento"
-date: 2015-07-06 16:25
+date: 2015-07-06 17:23
 comments: true
-categories: kb, sphinx-doc, migración
+categories: sphinx-doc, kb, migración
 ---
+
 
 Decidimos actualizar el lugar donde almacenamos nuestra documentación. Por lo cual nos cambiaremos a [Read The Docs](https://readthedocs.org/) y además se hace uso de [Sphinx-doc](http://sphinx-doc.org/), el cual es reconocido en el mundo del desarrollo de software por lo ordenado y sencillez con el que se genera la documentación. Existen varios proyectos que hacen uso de este software para documentar el desarrollo y que realmente, es digno de seguir. 
 
@@ -108,4 +109,14 @@ Aquí es sencillo, revisar cambios, hacer commit y subirlos a tu repositorio:
 
 Se mostrará los pasos mas generales para hacer esto, ya que luego de tus necesidades harás los cambios correspondientes.
 
-![Impo]()
+{% image center /images/rtd_1.jpg %}
+{% image center /images/rtd_2.jpg %}
+{% image center /images/rtd_3.jpg %}
+{% image center /images/rtd_4.jpg %}
+{% image center /images/rtd_5.jpg %}
+
+
+##8. Repetir punto 6 y 7
+
+El proceso se repite cada vez que quieras agregar un nuevo documento, obviamente si quieres enriquecer aún más el texto, es cosa de ir manejando el Restructured Text.
+
