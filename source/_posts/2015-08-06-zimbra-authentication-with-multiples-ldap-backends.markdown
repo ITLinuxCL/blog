@@ -69,7 +69,7 @@ This is new, well for me at least. We are going to tell OpenLDAP to pass the aut
  sasl-secprops   none
 ```
 
-`OpenLDAP` talks with `saslauthd` using a mutex, so open `/usr/lib/sasl2/slapd.conf` and add:
+`OpenLDAP` talks with `saslauthd` using a mutex, so open `/usr/lib64/sasl2/slapd.conf` and add:
 
 ```
 pwcheck_method: saslauthd
@@ -100,15 +100,7 @@ $ service slapd start
 $ ldapadd -x -D "cn=Manager,dc=proxy,dc=ldap" -wsecret -f zimbra_export.ldif -c
 ```
 
-No, i didn't tell you how to export the `ldif` file. Go ahead and Google it. Just one thing: delete all the reference to Zimbra classes, like:
-
-```yaml
-....
-objectClass: zimbraAccount
-zimbraId: 1319a3fb-e5f2-4cae-9d2e-47d03644a4d5
-zimbraCreateTimestamp: 20150727154351Z
-....
-```
+No, i didn't tell you how to export the `ldif` file from Zimbra, but you can find a step by step howto in our knowledge base: [Populating Proxy LDAP with Zimbra users](http://soporte.itlinux.cl/hc/es/articles/205723865)
 
 ### 3. Lets configure the Meta Backends
 We are going to use the `Meta Backends` like an `IPTABLES` [NAT](https://en.wikipedia.org/wiki/Network_address_translation), like this:
