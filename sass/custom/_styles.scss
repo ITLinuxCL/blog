@@ -28,11 +28,11 @@ html {
 	background-color: #299a0b; // Old browsers
 	@include filter-gradient(#71aa00, #299a0b, vertical); // IE6-9
 	@include background-image(linear-gradient(top, #71aa00 0%,#299a0b 100%));
-	
+
 	.main-navigation {
 		margin-top: 5px;
 	}
-	
+
 
     ul {
         padding-top:0px;
@@ -84,17 +84,24 @@ html {
      > div {
        border-bottom: 0px solid $page-border-bottom;
    }
-   
+
    article {
      ol, ul {
        padding-left: 1em;
-	   
+
 	   li {
 		   margin-bottom: 10px;
 	   }
-	   
+
      }
    }
 
 
+}
+
+// Reset image styles for Emoji
+.emoji {
+  box-shadow: none;
+  border: 0;
+  height: 20px;
 }

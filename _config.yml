@@ -7,7 +7,7 @@ title: IT Linux Blog
 subtitle: Compartimos lo que aprendemos cada día
 author: Patricio Bruna
 simple_search: http://google.com/search
-description: Información y tutoriales sobre tecnologías Open Source 
+description: Información y tutoriales sobre tecnologías Open Source
 
 # Default date format is "ordinal" (resulting in "July 22nd 2007")
 # You can customize the format as defined in
@@ -93,3 +93,6 @@ google_analytics_tracking_id: "UA-269314-5"
 
 # Facebook Like
 facebook_like: false
+
+# Emoji Dir
+emoji_dir: images/emoji
